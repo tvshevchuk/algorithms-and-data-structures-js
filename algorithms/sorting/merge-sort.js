@@ -1,4 +1,4 @@
-let Merge = (array, p, q, r) => {
+const Merge = (array, p, q, r) => {
     let n1 = q - p + 1;
     let n2 = r - q;
     let left_array = new Array(n1 + 1), right_array = new Array(n2 + 1);
@@ -27,7 +27,7 @@ let Merge = (array, p, q, r) => {
     }
 }
 
-let MergeSort = (array, p = 0, r = array.length - 1) => {
+const MergeSort = (array, p = 0, r = array.length - 1) => {
     if (p < r) {
         let q = Math.floor((p + r) / 2);
         MergeSort(array, p, q);
@@ -35,3 +35,5 @@ let MergeSort = (array, p = 0, r = array.length - 1) => {
         Merge(array, p, q, r);
     }
 }
+
+export default MergeSort;

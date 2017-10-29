@@ -1,4 +1,4 @@
-function InsertionSort (array) {
+const InsertionSort = (array) => {
     for (let j = 1; j < array.length; j++) {
         let key = array[j];
         let i = j - 1;
@@ -9,3 +9,5 @@ function InsertionSort (array) {
         array[i + 1] = key;
     }
 }
+
+export default InsertionSort;
